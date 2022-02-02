@@ -87,3 +87,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  fonts:
+    - family: dog
+      fonts:
+        - asset: assets/fonts/ic_dog.ttf
+    - family: tune
+      fonts:
+        - asset: assets/fonts/tune_variant.ttf    
+        
