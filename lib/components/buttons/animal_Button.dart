@@ -28,7 +28,18 @@ class AnimalButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
           color: colors.selectedColor,
         );
-
+        break;
+      case Breed.cat:
+        decoration = BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: colors.unSelectedColor,
+        );
+        break;
+      case Breed.bird:
+        decoration = BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: colors.unSelectedColor,
+        );
         break;
       default:
     }

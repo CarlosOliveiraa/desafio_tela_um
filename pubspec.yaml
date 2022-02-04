@@ -94,5 +94,11 @@ flutter:
         - asset: assets/fonts/ic_dog.ttf
     - family: tune
       fonts:
-        - asset: assets/fonts/tune_variant.ttf    
+        - asset: assets/fonts/tune_variant.ttf  
+    - family: cat
+      fonts:
+        - asset: assets/fonts/cat.ttf 
+    - family: bird
+      fonts:
+        - asset: assets/fonts/bird.ttf         
         

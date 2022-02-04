@@ -1,9 +1,8 @@
-import 'package:desafio_tela_um/components/buttons/filter_button.dart';
-import 'package:desafio_tela_um/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'buttons/animal_Button.dart';
-import 'buttons/icons_buttons.dart';
+import '../constants/constants.dart';
+import 'horizontal/horizontal_menu.dart';
+import 'vertical/vertical_cards.dart';
 
 class Background extends StatelessWidget {
   final double widht;
@@ -14,20 +13,35 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     AppColors colors = AppColors();
-    return LayoutBuilder(builder: (context, constraints) {
-      return Container(
-        alignment: Alignment.center,
-        width: widht,
-        height: height,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: colors.backgrounColor,
-        ),
-        child: const FilterButton(
-          size: 100,
-        ),
-      );
-    });
+    return Container(
+      alignment: Alignment.topCenter,
+      width: widht,
+      height: height,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: colors.backgrounColor,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 15),
+            child: HorizontalMenu(
+              width: size.width,
+              heigth: size.height * 0.1,
+            ),
+          ),
+          SizedBox(
+            height: size.height * 0.01,
+          ),
+          VerticalCards(
+            width: size.width * 0.9,
+          )
+        ],
+      ),
+    );
   }
 }
