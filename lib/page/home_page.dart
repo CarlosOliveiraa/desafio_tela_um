@@ -1,4 +1,5 @@
 import 'package:desafio_tela_um/components/background.dart';
+import 'package:desafio_tela_um/components/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +19,9 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            CustonAppBar(
+              width: size.width * 0.8,
+            ),
             Background(
               widht: size.width * 1.0,
               height: size.height * 0.87,

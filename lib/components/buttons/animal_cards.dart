@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class AnimalCards extends StatelessWidget {
   final double width;
   final double height;
+  final Widget child;
 
   const AnimalCards({
     Key? key,
     this.width = 264,
     this.height = 99,
+    required this.child,
   }) : super(key: key);
 
   @override
@@ -16,11 +18,14 @@ class AnimalCards extends StatelessWidget {
     AppColors colors = AppColors();
 
     return Container(
+      alignment: Alignment.center,
       width: width,
       height: height,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: colors.unSelectedColor),
+        borderRadius: BorderRadius.circular(25),
+        color: colors.unSelectedColor,
+      ),
+      child: child,
     );
   }
 }

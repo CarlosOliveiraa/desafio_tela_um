@@ -88,6 +88,16 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
+  assets:
+    - assets/images/golden.png
+    - assets/images/golden2.png
+    - assets/images/boston.png
+    - assets/images/siberian.png
+    - assets/images/siberian2.png
+    - assets/images/maltese.png
+    - assets/images/jack.png
+    - assets/images/pessoa.jpg
+
   fonts:
     - family: dog
       fonts:
@@ -100,5 +110,8 @@ flutter:
         - asset: assets/fonts/cat.ttf 
     - family: bird
       fonts:
-        - asset: assets/fonts/bird.ttf         
+        - asset: assets/fonts/bird.ttf  
+    - family: menu
+      fonts:
+        - asset: assets/fonts/menu.ttf           
         
