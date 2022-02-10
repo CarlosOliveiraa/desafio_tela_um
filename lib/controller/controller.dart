@@ -15,7 +15,7 @@ class Controller {
         icon: Icons.favorite,
         iconColor: Colors.redAccent),
     Animais(
-        name: "Sparky",
+        name: "Charlie",
         breed: "Boston Terrier",
         gender: "Male",
         age: "1,5 years old",
