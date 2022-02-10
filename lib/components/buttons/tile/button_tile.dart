@@ -1,5 +1,4 @@
-import 'package:desafio_tela_um/components/buttons/icons_buttons.dart';
-import 'package:desafio_tela_um/constants/constants.dart';
+import '../../../constants/constants.dart';
 import 'package:flutter/material.dart';
 
 enum Styles { dogs, cats, birds }

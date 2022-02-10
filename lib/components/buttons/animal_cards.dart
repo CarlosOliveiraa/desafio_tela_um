@@ -17,15 +17,19 @@ class AnimalCards extends StatelessWidget {
   Widget build(BuildContext context) {
     AppColors colors = AppColors();
 
-    return Container(
-      alignment: Alignment.center,
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
-        color: colors.unSelectedColor,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+        alignment: Alignment.center,
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: colors.unSelectedColor,
+        ),
+        child: child,
       ),
-      child: child,
     );
   }
 }

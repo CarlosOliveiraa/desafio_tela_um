@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
+import '../controller/controller.dart';
+import 'buttons/animal_cards.dart';
 import 'horizontal/horizontal_menu.dart';
 import 'vertical/vertical_cards.dart';
 
@@ -14,6 +16,7 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    Controller controller = Controller();
 
     AppColors colors = AppColors();
     return Container(
@@ -25,7 +28,7 @@ class Background extends StatelessWidget {
         color: colors.backgrounColor,
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 15),

@@ -1,8 +1,5 @@
-import 'package:desafio_tela_um/components/buttons/animal_cards.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
-import '../buttons/animal_Button.dart';
+import '../buttons/animal_button.dart';
 import '../buttons/filter_button.dart';
 import '../buttons/icons_buttons.dart';
 import '../buttons/tile/button_tile.dart';
@@ -16,55 +13,53 @@ class HorizontalMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SizedBox(
-        width: width,
-        height: heigth,
-        child: LayoutBuilder(builder: (context, constraints) {
-          return ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              SizedBox(width: constraints.maxWidth * 0.04),
-              FilterButton(
-                size: constraints.maxWidth * 0.17,
+    return SizedBox(
+      width: width,
+      height: heigth,
+      child: LayoutBuilder(builder: (context, constraints) {
+        return ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            SizedBox(width: constraints.maxWidth * 0.04),
+            FilterButton(
+              size: constraints.maxWidth * 0.17,
+            ),
+            SizedBox(width: constraints.maxWidth * 0.06),
+            AnimalButton(
+              widht: constraints.maxWidth * 0.25,
+              height: constraints.maxHeight,
+              child: const ButtonTile(
+                icons: IconsButtons.dog,
+                title: "Dogs",
+                style: Styles.dogs,
               ),
-              SizedBox(width: constraints.maxWidth * 0.06),
-              AnimalButton(
-                widht: constraints.maxWidth * 0.25,
-                height: constraints.maxHeight,
-                child: const ButtonTile(
-                  icons: IconsButtons.dog,
-                  title: "Dogs",
-                  style: Styles.dogs,
-                ),
+            ),
+            SizedBox(width: constraints.maxWidth * 0.06),
+            AnimalButton(
+              widht: constraints.maxWidth * 0.25,
+              height: constraints.maxHeight,
+              child: const ButtonTile(
+                icons: IconsButtons.cat,
+                title: "Cats",
+                style: Styles.cats,
               ),
-              SizedBox(width: constraints.maxWidth * 0.06),
-              AnimalButton(
-                widht: constraints.maxWidth * 0.25,
-                height: constraints.maxHeight,
-                child: const ButtonTile(
-                  icons: IconsButtons.cat,
-                  title: "Cats",
-                  style: Styles.cats,
-                ),
-                breed: Breed.cat,
+              breed: Breed.cat,
+            ),
+            SizedBox(width: constraints.maxWidth * 0.06),
+            AnimalButton(
+              widht: constraints.maxWidth * 0.25,
+              height: constraints.maxHeight,
+              child: const ButtonTile(
+                style: Styles.birds,
+                icons: IconsButtons.bird,
+                title: "Birds",
               ),
-              SizedBox(width: constraints.maxWidth * 0.06),
-              AnimalButton(
-                widht: constraints.maxWidth * 0.25,
-                height: constraints.maxHeight,
-                child: const ButtonTile(
-                  style: Styles.birds,
-                  icons: IconsButtons.bird,
-                  title: "Birds",
-                ),
-                breed: Breed.bird,
-              ),
-              SizedBox(width: constraints.maxWidth * 0.04),
-            ],
-          );
-        }),
-      ),
+              breed: Breed.bird,
+            ),
+            SizedBox(width: constraints.maxWidth * 0.04),
+          ],
+        );
+      }),
     );
   }
 }
